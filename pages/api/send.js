@@ -22,6 +22,7 @@ export default async function handler(req, res) {
       html: messageHtml,
     });
 
+    console.log('Resend response:', data); // 👈 Add this
     return res.status(200).json({ success: true, data });
   } catch (error) {
     console.error("Email send error:", error);
